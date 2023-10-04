@@ -51,6 +51,3 @@ def predict():
         confidence_score = probabilities[0][predicted[0]].item()
         print("Sending Response to Client")
         return jsonify({'prediction': classes[int(predicted[0])], 'confidence_score': confidence_score})
-
-if __name__ == '__main__':
-    app.run()
